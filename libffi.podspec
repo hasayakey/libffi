@@ -91,17 +91,17 @@ Pod::Spec.new do |spec|
   spec.default_subspec = 'common', 'arm64', 'x86_64'
 
   spec.subspec 'common' do |_spec|
-    _spec.source_files = 'darwin_common/src/closures.c', 'darwin_common/src/prep_cif.c', 'darwin_common/src/types.c'
+    _spec.source_files = 'darwin_common/src/closures.c', 'darwin_common/src/prep_cif.c', 'darwin_common/src/types.c', 'darwin_common/include/*.h'
     _spec.public_header_files = 'darwin_common/include/*.h'
   end
 
   spec.subspec 'arm64' do |_spec|
-    _spec.source_files = 'darwin_ios/src/aarch64/ffi_arm64.c', 'darwin_ios/src/aarch64/internal.h', 'darwin_ios/src/aarch64/sysv_arm64.S'
+    _spec.source_files = 'darwin_ios/src/aarch64/ffi_arm64.c', 'darwin_ios/src/aarch64/internal.h', 'darwin_ios/src/aarch64/sysv_arm64.S', 'darwin_ios/include/ffi_arm64.h', 'darwin_ios/include/fficonfig_arm64.h', 'darwin_ios/include/ffitarget_arm64.h'
     _spec.public_header_files = 'darwin_ios/include/ffi_arm64.h', 'darwin_ios/include/fficonfig_arm64.h', 'darwin_ios/include/ffitarget_arm64.h'
   end
 
   spec.subspec 'x86_64' do |_spec|
-    _spec.source_files = 'darwin_ios/src/x86/ffi64_x86_64.c', 'darwin_ios/src/x86/ffiw64_x86_64.c', 'darwin_ios/src/x86/internal64.h', 'darwin_ios/src/x86/unix64_x86_64.S', 'darwin_ios/src/x86/win64_x86_64.S', 
+    _spec.source_files = 'darwin_ios/src/x86/ffi64_x86_64.c', 'darwin_ios/src/x86/ffiw64_x86_64.c', 'darwin_ios/src/x86/internal64.h', 'darwin_ios/src/x86/unix64_x86_64.S', 'darwin_ios/src/x86/win64_x86_64.S', 'darwin_ios/include/ffi_x86_64.h', 'darwin_ios/include/fficonfig_x86_64.h', 'darwin_ios/include/ffitarget_x86_64.h'
     _spec.public_header_files = 'darwin_ios/include/ffi_x86_64.h', 'darwin_ios/include/fficonfig_x86_64.h', 'darwin_ios/include/ffitarget_x86_64.h'
   end
 
