@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   spec.default_subspec = 'common', 'arm64', 'x86_64'
 
   spec.subspec 'common' do |_spec|
-    _spec.source_files = 'darwin_common/src/closures.c', 'darwin_common/src/prep_cif.c', 'darwin_common/src/types.c', 'darwin_common/include/*.h'
+    _spec.source_files = 'darwin_common/src/closures.c', 'darwin_common/src/dlmalloc.c', 'darwin_common/src/prep_cif.c', 'darwin_common/src/types.c', 'darwin_common/include/*.h'
     _spec.public_header_files = 'darwin_common/include/*.h'
   end
 
